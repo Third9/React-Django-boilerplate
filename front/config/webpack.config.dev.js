@@ -5,19 +5,19 @@ var BundleTracker = require('webpack-bundle-tracker');
 
 module.exports = {
   devtool: 'source-map',
-  context: resolve(__dirname, '../src'),
+  context: resolve(__dirname, '../app'),
   entry: [
       'react-hot-loader/patch',
       // activate HMR for react
 
-      'webpack-dev-server/client?http://127.0.0.1:3031',
+      'webpack-dev-server/client?http://1.201.137.209:2082',
       'webpack/hot/only-dev-server',
-      resolve(__dirname, '../src/js/index.js'),
+      resolve(__dirname, '../app/js/index.js'),
   ],
   output: {
       path: resolve(__dirname, '../dist/assets'),
       filename: "[name]-[hash].js",
-      publicPath: 'http://127.0.0.1:3031/dist/assets/',
+      publicPath: 'http://1.201.137.209:2082/dist/assets/',
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

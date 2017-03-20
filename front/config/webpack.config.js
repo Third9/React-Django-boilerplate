@@ -4,9 +4,9 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var BundleTracker = require('webpack-bundle-tracker');
 
 module.exports = {
-  context: resolve(__dirname, '../src'),
+  context: resolve(__dirname, '../app'),
   entry: [
-      resolve(__dirname, '../src/js/index.js'),
+      resolve(__dirname, '../app/js/index.js'),
   ],
   output: {
       path: resolve(__dirname, '../dist/assets'),
