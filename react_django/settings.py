@@ -25,7 +25,7 @@ SECRET_KEY = 'f#k3ht!%x&a)8ke+^*_yv^#=gs3ms$i*(drt6t8!#l7hzhqaj-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1',]
+ALLOWED_HOSTS = ['*',]
 
 
 # Application definition
@@ -43,6 +43,8 @@ DEFAULT_APPS = [
 
 EXTERNAL_APPS = [
     'webpack_loader',
+    'rest_framework',
+    'rest_framework_swagger',
 ]
 
 PROJECT_APPS = [
@@ -128,14 +130,18 @@ USE_L10N = True
 USE_TZ = True
 
 
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'front'),
+# )
+
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.10/howto/static-files/
-
+# https://docs.djangoproject.com/en/1.8/howto/static-files/
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static-dev'),
+]
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'front'),
-)
 
 # Webpack loader
 WEBPACK_LOADER = {

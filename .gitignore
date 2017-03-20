@@ -1,3 +1,7 @@
 # build/compile file 
 *.pyc
 front/dist/assets/*.js
+static/admin/
+static/rest_framework/
+static/rest_framework_swagger/
+.idea/
