@@ -5,7 +5,7 @@ from django.conf.urls import include, url
 import views as api
 
 urlpatterns = [
-    url(r'^$', api.TodoViewSet.as_view(
+    url(r'^todo$', api.TodoViewSet.as_view(
         actions={'get': 'list_todo',
                  'post': 'create_todo'
                  }),
