@@ -7,10 +7,10 @@ new WebpackDevServer(webpack(config), {
   hot: true,
   inline: true,
   historyApiFallback: true
-}).listen(3031, '127.0.0.1', function (err, result) {
+}).listen(2082, '0.0.0.0', function (err, result) {
   if (err) {
     console.log(err);
   }
 
-  console.log('Listening at 127.0.0.1:3031');
+  console.log('Listening at 0.0.0.0:2082');
 });
